@@ -10,7 +10,7 @@ function copyToClipboard(val) {
   document.body.removeChild(t);
 }
 function copy() {
-  copyToClipboard('ellahyesu@naver.com');
+  copyToClipboard('hyesukim@kakao.com');
   console.log('Copied!');
 }
 
