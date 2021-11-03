@@ -507,6 +507,15 @@ p {
   color: #03C75A;
 }
 
+.count__today {
+  display: flex;
+  justify-content: center;
+  color: var(--color-white);
+  margin-bottom: 25px;
+}
+
+
+
 /* Scroll */
 .arrow-up {
   position: fixed;
