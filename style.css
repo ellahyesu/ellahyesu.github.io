@@ -44,17 +44,21 @@
 
 body {
   margin: 0;
-  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Kanit', sans-serif;
+  font-size: 20px;
   cursor: default;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Black Han Sans', sans-serif;
+  /* font-family: 'Black Han Sans', sans-serif; */
+}
+
+small {
+  font-size: 5px;
 }
 
 a{
   text-decoration: none;
-  color: var(--color-white);
 }
 
 ul{
@@ -113,25 +117,30 @@ p {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-light-black);
+  background-color: #F5740F;
   align-items: center;
   color: var(--color-white);
-  padding: 16px;
+  padding: 25px;
   transition: all var(--animation-duration) ease-in-out;
   z-index: 1; /* navbar 항상 위로 ! */
 }
 
 #navbar.navbar--dark {
   background-color: var(--color-light-black);
-  padding: 8px;
+  padding: 18px;
+}
+
+#navbar ul {
+  margin: 0;
 }
 
 .navbar__menu{
   display: flex;
 }
 
-.navbar__logo{
+.navbar__logo a {
   margin-left: 15px;
+  color: var(--color-white);
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
 }
@@ -177,6 +186,8 @@ p {
 }
 
 .home__avatar{
+  margin-top: 50px;
+  margin-bottom: 50px;
   width: 250px;
   height: 250px;
   border-radius: 50%;
@@ -184,16 +195,30 @@ p {
 
 .home__title, .home__description{
   color: var(--color-black);
+  font-weight: bold;
 }
 
 .home__contact {
   color: black;
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
+  height: 50px;
+  width: 150px;
   margin: 24px;
-  padding: 8px 12px;
-  border: 2px solid var(--color-light-grey);
-  border-radius: var(--size-border-radius);
+
+  /* border-radius: 5px;
+  border: 1px solid transparent;
+  background-image: linear-gradient(#fff, #fff), 
+  linear-gradient(to right, red 0%,  orange 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box; */
+
+
+  box-sizing: border-box;
+  border: 5px;
+  border-style: solid;
+  border-image: linear-gradient(to right, red 0%,  orange 100%);
+  border-image-slice: 1;
 }
 
 .home__contact:hover {
@@ -217,10 +242,41 @@ p {
   background-color: #F5F5F5;
 }
 
+#careerLine {
+  margin-top: 100px;
+}
+
+#careerLine:after {
+  content: '';
+  display: block;
+  position: relative;
+  left: 10%;
+  width: 78%;
+  height: 2px;
+  margin-left: -12px;
+  margin-top: 8px;
+  background-color: var(--color-dark-white);
+}
+
+#careerYear {
+  left: 11%;
+  position: absolute;
+}
+
+.text__thisyear {
+  color: #F5740F; 
+}
+
 .about__jobs {
   display: flex;
   justify-content: center;
-  margin: 80px 0;
+  margin-top: 200px;
+}
+
+#manTechLogo {
+  color: red;
+  font-size: 25px;
+  font-weight: bold;
 }
 
 .job__logo {
@@ -235,10 +291,15 @@ p {
   text-align: left;
 }
 
+.major {
+  padding-right: 50px;
+}
+
 .about__majors {
   display: flex;
   justify-content: space-between;
   margin: 80px 0;
+  width: 1400px;
 }
 
 .major__icon {
@@ -260,23 +321,24 @@ p {
 .front__icon:hover {
   color: red;
   border: 1px solid black;
-  transform: rotate(-15deg) scale(1.1);
+  /* transform: rotate(-15deg) scale(1.1); */
 }
 
 .back__icon:hover {
   color: var(--color-blue);
   border: 1px solid black;
-  transform: rotate(-15deg) scale(1.1);
+  /* transform: rotate(-15deg) scale(1.1); */
 }
 
 .etc__icon:hover {
   color: black;
   border: 1px solid black;
-  transform: rotate(-15deg) scale(1.1);
+  /* transform: rotate(-15deg) scale(1.1); */
 }
 
 .major__title {
   margin-top: 15px;
+  font-weight: bold;
 }
 
 .major__title, .major__description {
@@ -284,7 +346,22 @@ p {
 }
 
 .major__description {
-  font-size: var(--font-small);
+  margin-top: 50px;
+}
+
+.major__description .project__info__table {
+  font-size: 18px;
+}
+
+.major__description .project__info__table th {
+  width: 300px;
+  text-align: left;
+  padding-right: 15px;
+}
+
+.major__description .project__info__table td {
+  width: 500px;
+  text-align: left;
 }
 
 /* Skill */
@@ -327,7 +404,7 @@ p {
 
 .skill__value {
   height: 3px;
-  background-color: var(--color-orange);
+  /* background-color: var(--color-orange); */
 }
 
 .skillset__right {
@@ -344,11 +421,6 @@ p {
 }
 
 /* Work */
-
-#projects {
-
-}
-
 .work__categories {
   margin: 40px;
 }
@@ -374,7 +446,7 @@ p {
 
 .category__count {
   font-size: 14px;
-  background-color: var(--color-light-grey);
+  background-color: #F5740F;
   border-radius: 50%;
   color: var(--color-white);
   width: 20px;
@@ -442,11 +514,11 @@ p {
   transform: translateY(0px);
 }
 
-.project__description h3 {
+.project__description h2 {
   color: var(--color-white);
 }
 
-.project__description h3:after {
+/* .project__description h3:after {
   content: '';
   display: block;
   position: relative;
@@ -456,15 +528,58 @@ p {
   margin-left: -12px;
   margin-top: 8px;
   background-color: var(--color-dark-white);
+} */
+
+.go-sourcecode {
+  color: var(--color-blue);
+}
+
+.go-sourcecode:hover {
+  color: #F5740F;
+}
+
+.modal-body .project__info__table {
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  
+}
+
+.modal-body .project__info__table tr {
+  font-size: 20px;
+  border-bottom: 1px solid #909090;
+}
+
+/* .modal-body .project__info__table th:after {
+  content: '';
+  display: block;
+  position: relative;
+  width: 110px;
+  height: 1.5px;
+  margin-left: -12px;
+  background-color: #F5F5F5;
+} */
+
+
+.modal-body .project__info__table th {
+  width: 130px;
+  text-align: left;
+}
+
+.modal-body .project__info__table td {
+  text-align: left;
 }
 
 /* Contact */
 #contact {
-  background-color: #222222;
+  background-color: var(--color-black);
+}
+
+.text__small {
+  font-size: 25px;
 }
 
 .contact__font {
-  color: #909090;
+  color: #F5F5F5;
 }
 
 .contact__title, .contact__rights {
@@ -475,11 +590,19 @@ p {
   margin: 32px 0;
 }
 
-.contact__email {
+.contact__me {
   display: flex;
   justify-content: center;
   color: white;
   font-size: 30px;
+}
+
+.contact__me a {
+  color: var(--color-blue);
+}
+
+.contact__me a:hover {
+  color: #F5740F;
 }
 
 .copy__btn {
@@ -524,7 +647,7 @@ p {
   width: 50px;
   height: 50px;
   font-size: 25px;
-  background-color: #909090;
+  background-color: #F5740F;
   color: var(--color-white);
   border-radius: 50%;
   opacity: 0;

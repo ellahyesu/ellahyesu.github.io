@@ -9,15 +9,26 @@
     <meta name="description" content="Portfolio for world-renowned software engineer Ella">
     <meta name="author" content="Hyesu">
     <link rel="icon" type="image/png" href="./imgs/crown.png">
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
-    <!-- font awesome icon -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+
+    <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Hind+Madurai:wght@300;400;500;600;700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Kanit&family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <!-- font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
 
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- my style -->
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
 </head>
@@ -46,82 +57,120 @@
     <!-- Home -->
     <section id="home">
         <div class="home__container">
-            <img src="./imgs/c.png" alt="Ella's profile photo" class="home__avatar">
-            <h1 class="home__title">Hello, <br /> I'm Hyesu Kim !</h1>
-            <h2 class="home__description">Web developer</h2>
-            <button class="home__contact">Contact Me</button>
+            <img src="./imgs/profile.jpg" alt="Ella's profile photo" class="home__avatar">
+            <h2 class="home__title mt-3">안녕하세요? 김혜수 입니다.</h2><br>
+            <h5 class="home__description"><팀워크> <신속> <효율> 중심의 업무를 지향하며,</h5>
+            <h5 class="home__description"><풀스택> <클린코드> <객체지향> 개발을 선호 합니다.</h5>
+            <button class="home__contact">
+                Contact Me
+            </button>
         </div>
     </section>
 
     <!-- Career -->
     <section id="career" class="section">
-        <h1>Career</h1>
-
-        <p><b>개발 內</b></p>
-        <div class="about__jobs">
-            <div class="job__logo">
-                <img src="/imgs/ulysystems_logo.png" width="70px">
-            </div>
-            <div class="job__description">
-                <h2>(주) 율리시스템즈</h2>
-                <div>• 2021.11 - 현재</div>
-                <div>• 대기업 프로젝트 SI, SM</div>
-            </div>
+        <h1><b>Career</b></h1>
+        <div id="careerLine"></div>
+        <div id="careerYear" class="w-75 d-flex justify-content-between">
+            <h5>
+                <div>2017</div>
+                ㈜SK Hynix
+            <h5>
+                <div>2020</div>
+                (교육)대한상공회의소
+            </h5>
+            <h5>
+                <div>2021</div>
+                <div>(교육)메가스터디</div>
+                <div>㈜율리시스템즈</div>
+            </h5>
+            <h5>
+                <div class="text__thisyear">2022</div>
+                ㈜맨텍네트웍스
+            </h5>
         </div>
 
-        <div class="about__jobs">
-            <div class="job__logo">
-                <img src="/imgs/megait_logo.png" width="170px">
-            </div>
-            <div class="job__description">
-                <h2>메가스터디 IT 아카데미</h2>
-                <div>• 2021.04 - 2021.10</div>
-                <div>• 웹 프로그래밍 교육 과정 수료</div>
-            </div>
-        </div>
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="w-75">
+                <div class="about__jobs">
+                    <div class="job__logo">
+                        <div id="manTechLogo">
+                            ManTech
+                        </div>
+                    </div>
+                    <div class="job__description">
+                        <h2><b>㈜맨텍네트웍스</b></h2>
+                        <div><small>■</small> 2022.04 - 현재</div>
+                        <div><small>■</small> 대기업 프로젝트 SI, SM</div>
+                    </div>
+                </div>
 
-        <div class="about__jobs">
-            <div class="job__logo">
-                <img src="/imgs/laonpeople_logo.png" width="170px">
-            </div>
-            <div class="job__description">
-                <h2>(주) 라온피플</h2>
-                <div>• 2020.10 - 2020.12</div>
-                <div>• AI 알고리즘 연구 개발 보조 업무</div>
-            </div>
-        </div>
+                <div class="about__jobs">
+                    <div class="job__logo">
+                        <img src="/imgs/ulysystems_logo.png" width="70px">
+                    </div>
+                    <div class="job__description">
+                        <h2><b>㈜율리시스템즈</b></h2>
+                        <div><small>■</small> 2021.11 - 2022.04</div>
+                        <div><small>■</small> 대기업 프로젝트 SI, SM</div>
+                    </div>
+                </div>
 
-        <div class="about__jobs">
-            <div class="job__logo">
-                <img src="/imgs/sang_logo.png" width="170px">
-            </div>
-            <div class="job__description">
-                <h2>대한상공회의소</h2>
-                <div>• 2020.04 - 2020.10</div>
-                <div>• SW 교육 과정 수료</div>
-            </div>
-        </div>
+                <div class="about__jobs">
+                    <div class="job__logo">
+                        <img src="/imgs/megait_logo.png" width="170px">
+                    </div>
+                    <div class="job__description">
+                        <h2>메가스터디 IT 아카데미</h2>
+                        <div><small>■</small> 2021.04 - 2021.10</div>
+                        <div><small>■</small> 웹 프로그래밍 교육 과정 수료</div>
+                    </div>
+                </div>
 
-        <p><b>개발 外</b></p>
-        <div class="about__jobs">
-            <div class="job__logo">
-                <img src="/imgs/SK_Hynix-Logo.wine.png" width="170px">
-            </div>
-            <div class="job__description">
-                <h2>(주) SK Hynix</h2>
-                <div>• 2017.10 - 2019.10</div>
-                <div>• 인사 급여 복리후생 업무</div>
-            </div>
-        </div>
+                <!-- <div class="about__jobs">
+                    <div class="job__logo">
+                        <img src="/imgs/laonpeople_logo.png" width="170px">
+                    </div>
+                    <div class="job__description">
+                        <h2>(주) 라온피플</h2>
+                        <div>• 2020.10 - 2020.12</div>
+                        <div>• AI 알고리즘 연구 개발 보조 업무</div>
+                    </div>
+                </div> -->
 
-        <div class="about__jobs">
-            <div class="job__logo">
-                <img src="/imgs/ses_logo.gif" width="170px">
-            </div>
-            <div class="job__description">
-                <h2>(주) SES 모바일</h2>
-                <div>• 2016.10 - 2017.10</div>
-                <div>• 삼성전자 모바일 기기 제품 홍보 마케팅 업무</div>
+                <div class="about__jobs">
+                    <div class="job__logo">
+                        <img src="/imgs/sang_logo.png" width="170px">
+                    </div>
+                    <div class="job__description">
+                        <h2>대한상공회의소</h2>
+                        <div><small>■</small> 2020.04 - 2020.10</div>
+                        <div><small>■</small> SW 교육 과정 수료</div>
+                    </div>
+                </div>
+
+                <!-- <p><b>개발 外</b></p> -->
+                <div class="about__jobs">
+                    <div class="job__logo">
+                        <img src="/imgs/SK_Hynix-Logo.wine.png" width="170px">
+                    </div>
+                    <div class="job__description">
+                        <h2><b>㈜SK Hynix</b></h2>
+                        <div><small>■</small> 2017.10 - 2019.10</div>
+                        <div><small>■</small> HR 업무 (인사/급여/복리후생)</div>
+                    </div>
+                </div>
+
+                <!-- <div class="about__jobs">
+                    <div class="job__logo">
+                        <img src="/imgs/ses_logo.gif" width="170px">
+                    </div>
+                    <div class="job__description">
+                        <h2>(주) SES 모바일</h2>
+                        <div>• 2016.10 - 2017.10</div>
+                        <div>• 삼성전자 모바일 기기 제품 홍보 마케팅 업무</div>
+                    </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -129,7 +178,7 @@
     <!-- Skills -->
     <section id="skills" class="section">
         <div class="section__container">
-            <h1>Skills</h1>
+            <h1><b>Skills</b></h1>
             <div class="about__majors">
                 <div class="major">
                     <div class="major__icon front__icon">
@@ -137,8 +186,28 @@
                     </div>
                     <h2 class="major__title">Front-end</H2>
                     <div class="major__description">
-                        HTML, CSS, JavaScript, jQuery,<br>
-                        BootStrap, Web APIs
+                        <table class="project__info__table">
+                            <thead>
+                                <tr>
+                                    <th>Framework</th>
+                                    <td>Vue.js</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Language</th>
+                                    <td>
+                                        JSP / JavaScript / jQuery / HTML / CSS
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>ETC</th>
+                                    <td>
+                                        BootStrap / Web APIs
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
@@ -148,8 +217,34 @@
                     </div>
                     <h2 class="major__title">Back-end</H2>
                     <div class="major__description">
-                        Java, Python,<br>
-                        SpringBoot, Oracle, MySQL, MyBatis
+                        <table class="project__info__table">
+                            <thead>
+                                <tr>
+                                    <th>Framework</th>
+                                    <td>SpringBoot</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Language</th>
+                                    <td>
+                                        Java / Python
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>DB</th>
+                                    <td>
+                                        Oracle / MySQL / MyBatis
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>ETC</th>
+                                    <td>
+                                        JPA
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
@@ -159,8 +254,34 @@
                     </div>
                     <h2 class="major__title">ETC</h2>
                     <div class="major__description">
-                        Linux,<br>
-                        Git, Jira, Slack
+                        <table class="project__info__table">
+                            <thead>
+                                <tr>
+                                    <th>OS</th>
+                                    <td>Linux</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>Plugin</th>
+                                    <td>
+                                        Confluence / Jira
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>Cloud</th>
+                                    <td>
+                                        Amazon EC2
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>VCS</th>
+                                    <td>
+                                        GitHub / GitLab / Bitbucket
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>                       
                     </div>
                 </div>
             </div>
@@ -170,13 +291,13 @@
     <!-- Projects -->
     <section id="projects" class="section">
         <div class="section__container">
-            <h1>Projects</h1>
+            <h1><b>Projects</b></h1>
             <div class="work__categories">
                 <button class="category__btn selected" data-filter="*">All
-                    <span class="category__count">12</span>
+                    <span class="category__count">13</span>
                 </button>
-                <button class="category__btn" data-filter="full-stack">Full stack
-                    <span class="category__count">4</span>
+                <button class="category__btn" data-filter="full-stack">Full-stack
+                    <span class="category__count">5</span>
                 </button>
                 <button class="category__btn" data-filter="front-end">Front-end
                     <span class="category__count">4</span>
@@ -187,132 +308,1213 @@
             </div>
 
             <div class="work__projects">
+            
                 <!-- full stack -->
-                <a href="https://github.com/ellahyesu/shoppingmall" class="project" target="blank"
-                    data-type="full-stack">
+
+
+                <!-- healthclub_site -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn project" data-bs-toggle="modal" data-bs-target="#healthclubModal" data-type="full-stack">
+                    <img class="project__img" src="/imgs/project_healthclub.PNG" alt="healthclub_site">
+                    <div class="project__description">
+                        <h2><i class="fas fa-plus-circle"></i></h2>
+                    </div>
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="healthclubModal" tabindex="-1" aria-labelledby="healthclubModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="healthclubModalLabel">Health Club Community</h4>
+                                <div>
+                                    <a href="https://github.com/ellahyesu/health-club-front" class="go-sourcecode" target="blank">
+                                        　Code
+                                    </a>
+                                </div> 
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body mt-5 mb-5">
+                                <div class="d-flex">
+                                    <div class="w-50 d-flex justify-content-center align-items-center">
+                                        <a href="https://github.com/ellahyesu/health-club-front" target="blank">
+                                            <img class="project__img" src="/imgs/project_healthclub.PNG" alt="healthclub_site">
+                                        </a>
+                                    </div>
+                                    <div class="w-50">
+                                        <table class="project__info__table">
+                                            <thead>
+                                                <tr>
+                                                    <th>개발 기간</th>
+                                                    <td>22.06.20 - 현재</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th rowspan="2">기술 스택</th>
+                                                    <td>
+                                                        <b><small>■</small> Front</b> - Vue.js / JavaScript / HTML / CSS
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> Back</b> - Spring / Java / JPA / MySQL
+                                                    </td>
+                                                </tr>
+                                                <!-- <tr>
+                                                    <th>
+                                                        Demo
+                                                    </th>
+                                                    <td>
+                                                        <a href="https://youtu.be/slyRph7YlnI" target="_blank"><b>1. 사용자 화면</b></a><br>
+                                                    </td>
+                                                </tr> -->
+                                                <tr>
+                                                    <th rowspan="3">담당 업무</th>
+                                                    <td>
+                                                        <b><small>■</small> 설계</b> - UI / DB / API
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> 구현</b> - Front / Back
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> 테스트</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>특이 사항</th>
+                                                    <td>Vue와 JPA를 활용한 1인 프로젝트</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Modal -->
+                <!-- // healthclub_site -->
+
+
+
+                <!-- shoppingmall -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn project" data-bs-toggle="modal" data-bs-target="#shoppingmallModal" data-type="full-stack">
                     <img class="project__img" src="/imgs/project_shoppingmall.PNG" alt="shoppingmall_site">
                     <div class="project__description">
-                        <h3>Cosmetics Shopping Mall</h3>
-                        <span>21.08.30 - 21.09.30</span>
+                        <h2><i class="fas fa-plus-circle"></i></h2>
                     </div>
-                </a>
+                </button>
 
-                <a href="https://github.com/ellahyesu/inssagram" class="project" target="blank" data-type="full-stack">
+                <!-- Modal -->
+                <div class="modal fade" id="shoppingmallModal" tabindex="-1" aria-labelledby="shoppingmallModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title" id="shoppingmallModalLabel">Online e-commerce Marketplace</h4>
+                                <div>
+                                    <a href="https://github.com/ellahyesu/shoppingmall" class="go-sourcecode" target="blank">
+                                        　Code
+                                    </a>
+                                </div> 
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body mt-5 mb-5">
+                                <div class="d-flex">
+                                    <div class="w-50 d-flex justify-content-center align-items-center">
+                                        <a href="https://github.com/ellahyesu/shoppingmall" target="blank">
+                                            <img class="project__img" src="/imgs/project_shoppingmall.PNG" alt="shoppingmall_site">
+                                        </a>
+                                    </div>
+                                    <div class="w-50">
+                                        <table class="project__info__table">
+                                            <thead>
+                                                <tr>
+                                                    <th>개발 기간</th>
+                                                    <td>21.08.30 - 21.09.30</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th rowspan="3">기술 스택</th>
+                                                    <td>
+                                                        <b><small>■</small> Front</b> - JSP / JavaScript / HTML / CSS
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> Back</b> - Spring / Java / Mybatis / MySQL
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> Cloud</b> - AWS EC2 Server
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th rowspan="2">
+                                                        Demo
+                                                    </th>
+                                                    <td>
+                                                        <a href="https://youtu.be/slyRph7YlnI" target="_blank"><b>1. 사용자 화면</b></a><br>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <a href="https://youtu.be/69zVSmx14_U" target="_blank"><b>2. 관리자 화면</b></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th rowspan="3">담당 업무</th>
+                                                    <td>
+                                                        <b><small>■</small> 설계</b> - UI / DB / API
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> 구현</b> - Front / Back
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> 테스트</b> - <a href="https://github.com/ellahyesu/shoppingmall/files/7274124/default.xlsx"><b>50개 시나리오 완료</b></a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>특이 사항</th>
+                                                    <td>설계부터 AWS 서버 구축까지 1인 프로젝트</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Modal -->
+                <!-- // shoppingmall -->
+
+
+                <!-- inssagram -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn project" data-bs-toggle="modal" data-bs-target="#inssagramModal" data-type="full-stack">
                     <img class="project__img" src="/imgs/project_sns.PNG" alt="SNS_site">
                     <div class="project__description">
-                        <h3>SNS</h3>
-                        <span>21.08.11 - 21.08.30</span>
+                        <h2><i class="fas fa-plus-circle"></i></h2>
                     </div>
-                </a>
+                </button>
 
-                <a href="https://github.com/ellahyesu/memo" class="project" target="blank" data-type="full-stack">
+                <!-- Modal -->
+                <div class="modal fade" id="inssagramModal" tabindex="-1" aria-labelledby="inssagramModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="d-flex justify-content-between">
+                                    <h4 class="modal-title" id="inssagramModalLabel">SNS</h4>
+                                    <div>
+                                        <a href="https://github.com/ellahyesu/inssagram" class="go-sourcecode" target="blank">
+                                            　Code
+                                        </a>
+                                    </div>
+                                </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body mt-5 mb-5">
+                                <div class="d-flex">
+                                    <div class="w-50 d-flex justify-content-center align-items-center">
+                                        <a href="https://github.com/ellahyesu/inssagram" target="blank">
+                                            <img class="project__img" src="/imgs/project_sns.PNG" alt="SNS_site">
+                                        </a>
+                                    </div>
+                                    <div class="w-50">
+                                        <table class="project__info__table">
+                                            <thead>
+                                                <tr>
+                                                    <th>개발 기간</th>
+                                                    <td>21.08.11 - 21.08.30</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th rowspan="3">기술 스택</th>
+                                                    <td>
+                                                        <b><small>■</small> Front</b> - JSP / JavaScript / HTML / CSS
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> Back</b> - Spring / Java / Mybatis / MySQL
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> ETC</b> - <a href="https://ovenapp.io/view/jH0ei1yrTzqqEruubKbA3uttvsGtt9Eq/cjcMh">Kakao oven</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        Demo
+                                                    </th>
+                                                    <td>
+                                                        <a href="https://user-images.githubusercontent.com/69390318/131154288-ebbdc99d-4608-4d9c-bb66-fab4c1fb080b.gif" target="_blank">
+                                                            <b>바로가기</b>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th rowspan="3">담당 업무</th>
+                                                    <td>
+                                                        <b><small>■</small> 설계</b> - UI / DB / API
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> 구현</b> - Front / Back
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> 테스트</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>특이 사항</th>
+                                                    <td>1인 프로젝트</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Modal -->
+                <!-- // inssagram -->
+
+
+                <!-- memo -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn project" data-bs-toggle="modal" data-bs-target="#memoModal" data-type="full-stack">
                     <img class="project__img" src="/imgs/project_memo.PNG" alt="memo_site">
                     <div class="project__description">
-                        <h3>Notice Board Site</h3>
-                        <span>21.08.11 - 21.08.24</span>
+                        <h2><i class="fas fa-plus-circle"></i></h2>
                     </div>
-                </a>
+                </button>
 
-                <a href="https://github.com/ellahyesu/spring_quiz" class="project" target="blank"
-                    data-type="full-stack">
+                <!-- Modal -->
+                <div class="modal fade" id="memoModal" tabindex="-1" aria-labelledby="memoModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="d-flex justify-content-between">
+                                    <h4 class="modal-title" id="memoModalLabel">Notice Board</h4>
+                                    <div>
+                                        <a href="https://github.com/ellahyesu/memo" class="go-sourcecode" target="blank">
+                                            　Code
+                                        </a>
+                                    </div>
+                                </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body mt-5 mb-5">
+                                <div class="d-flex">
+                                    <div class="w-50 d-flex justify-content-center align-items-center">
+                                        <a href="https://github.com/ellahyesu/memo" target="blank">
+                                            <img class="project__img" src="/imgs/project_memo.PNG" alt="memo_site">
+                                        </a>
+                                    </div>
+                                    <div class="w-50">
+                                        <table class="project__info__table">
+                                            <thead>
+                                                <tr>
+                                                    <th>개발 기간</th>
+                                                    <td>21.08.11 - 21.08.24</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th rowspan="2">기술 스택</th>
+                                                    <td>
+                                                        <b><small>■</small> Front</b> - JSP / JavaScript / HTML / CSS
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> Back</b> - Spring / Java / Mybatis / MySQL
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        Demo
+                                                    </th>
+                                                    <td>
+                                                        <a href="https://user-images.githubusercontent.com/69390318/130616130-721ccdbd-188b-40f3-b8d1-82084dc79d90.gif" target="_blank">
+                                                            <b>바로가기</b>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th rowspan="3">담당 업무</th>
+                                                    <td>
+                                                        <b><small>■</small> 설계</b> - UI / DB / API
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> 구현</b> - Front / Back
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> 테스트</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>특이 사항</th>
+                                                    <td>1인 프로젝트</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Modal -->
+                <!-- // memo -->
+
+
+                <!-- booking_site -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn project" data-bs-toggle="modal" data-bs-target="#bookingModal" data-type="full-stack">
                     <img class="project__img" src="/imgs/project_booking.PNG" alt="booking_site">
                     <div class="project__description">
-                        <h3>Booking Site</h3>
-                        <span>21.08.05 - 21.08.10</span>
+                        <h2><i class="fas fa-plus-circle"></i></h2>
                     </div>
-                </a>
+                </button>
 
-                <a href="#" class="project" target="blank" data-type="front-end">
+                <!-- Modal -->
+                <div class="modal fade" id="bookingModal" tabindex="-1" aria-labelledby="bookingModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="d-flex justify-content-between">
+                                    <h4 class="modal-title" id="bookingModalLabel">Pension Reservation System</h4>
+                                    <div>
+                                        <a href="https://github.com/ellahyesu/spring_quiz" class="go-sourcecode" target="blank">
+                                            　Code
+                                        </a>
+                                    </div>
+                                </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body mt-5 mb-5">
+                                <div class="d-flex">
+                                    <div class="w-50 d-flex justify-content-center align-items-center">
+                                        <a href="https://github.com/ellahyesu/spring_quiz" target="blank">
+                                            <img class="project__img" src="/imgs/project_booking.PNG" alt="booking_site">
+                                        </a>
+                                    </div>
+                                    <div class="w-50">
+                                        <table class="project__info__table">
+                                            <thead>
+                                                <tr>
+                                                    <th>개발 기간</th>
+                                                    <td>21.08.05 - 21.08.10</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th rowspan="2">기술 스택</th>
+                                                    <td>
+                                                        <b><small>■</small> Front</b> - JSP / JavaScript / HTML / CSS
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> Back</b> - Spring / Java / Mybatis / MySQL
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        Demo
+                                                    </th>
+                                                    <td>
+                                                        <a href="https://user-images.githubusercontent.com/69390318/136018040-6c2e6d6e-e7f7-4b6a-8924-531a8ec66b6d.gif" target="_blank">
+                                                            <b>바로가기</b>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th rowspan="3">담당 업무</th>
+                                                    <td>
+                                                        <b><small>■</small> 설계</b> - UI / DB / API
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> 구현</b> - Front / Back
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> 테스트</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>특이 사항</th>
+                                                    <td>1인 프로젝트</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Modal -->
+                <!-- // booking_site -->
+
+
+
+                <!-- portfolio_site -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn project" data-bs-toggle="modal" data-bs-target="#portfolioModal" data-type="front-end">
                     <img class="project__img" src="/imgs/project_portfolio.PNG" alt="portfolio_site">
                     <div class="project__description">
-                        <h3>Portfolio Site</h3>
-                        <span>Responsive Web</span>
+                        <h2><i class="fas fa-plus-circle"></i></h2>
                     </div>
-                </a>
+                </button>
 
-                <a href="https://github.com/ellahyesu/megabox" class="project" target="blank" data-type="front-end">
+                <!-- Modal -->
+                <div class="modal fade" id="portfolioModal" tabindex="-1" aria-labelledby="portfolioModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="d-flex justify-content-between">
+                                    <h4 class="modal-title" id="portfolioModalLabel">Portfolio Site</h4>
+                                    <div>
+                                        <a href="https://github.com/ellahyesu/ellahyesu.github.io" class="go-sourcecode" target="blank"">
+                                            　Code
+                                        </a>
+                                    </div>
+                                </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body mt-5 mb-5">
+                                <div class="d-flex">
+                                    <div class="w-50 d-flex justify-content-center align-items-center">
+                                        <a href="https://github.com/ellahyesu/ellahyesu.github.io" target="blank">
+                                            <img class="project__img" src="/imgs/project_portfolio.PNG" alt="portfolio_site">
+                                        </a>
+                                    </div>
+                                    <div class="w-50">
+                                        <table class="project__info__table">
+                                            <thead>
+                                                <tr>
+                                                    <th>개발 기간</th>
+                                                    <td>21.02.16 - 현재</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th>기술 스택</th>
+                                                    <td>
+                                                        <b><small>■</small> Front</b> - JavaScript / HTML / CSS
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        Demo
+                                                    </th>
+                                                    <td>
+                                                        <a href="#">
+                                                            <b>바로가기</b>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th rowspan="2">담당 업무</th>
+                                                    <td>
+                                                        <b><small>■</small> 설계</b> - UI / UX
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> 구현</b> - Front
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Modal -->
+                <!-- // portfolio_site -->
+
+
+                <!-- megabox_site -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn project" data-bs-toggle="modal" data-bs-target="#megaboxModal" data-type="front-end">
                     <img class="project__img" src="/imgs/project_megabox.PNG" alt="megabox_site">
                     <div class="project__description">
-                        <h3>Movie Site</h3>
-                        <span>21.04.06 - 21.04.19</span>
+                        <h2><i class="fas fa-plus-circle"></i></h2>
                     </div>
-                </a>
+                </button>
 
-                <a href="https://github.com/ellahyesu/paintjs" class="project" target="blank" data-type="front-end">
+                <!-- Modal -->
+                <div class="modal fade" id="megaboxModal" tabindex="-1" aria-labelledby="megaboxModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="d-flex justify-content-between">
+                                    <h4 class="modal-title" id="megaboxModalLabel">Megabox Site</h4>
+                                    <div>
+                                        <a href="https://github.com/ellahyesu/megabox" class="go-sourcecode" target="blank"">
+                                            　Code
+                                        </a>
+                                    </div>
+                                </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body mt-5 mb-5">
+                                <div class="d-flex">
+                                    <div class="w-50 d-flex justify-content-center align-items-center">
+                                        <a href="https://github.com/ellahyesu/megabox" target="blank">
+                                            <img class="project__img" src="/imgs/project_megabox.PNG" alt="megabox_site">
+                                        </a>
+                                    </div>
+                                    <div class="w-50">
+                                        <table class="project__info__table">
+                                            <thead>
+                                                <tr>
+                                                    <th>개발 기간</th>
+                                                    <td>21.04.06 - 21.04.19</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th>기술 스택</th>
+                                                    <td>
+                                                        <b><small>■</small> Front</b> - JavaScript / HTML / CSS
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        Demo
+                                                    </th>
+                                                    <td>
+                                                        <a href="https://user-images.githubusercontent.com/69390318/130064029-6bba0538-2134-45a6-83d9-192689d9aa0c.png" target="_blank">
+                                                            <b>바로가기</b>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>담당 업무</th>
+                                                    <td>
+                                                        <b><small>■</small> 구현</b> - Front
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Modal -->
+                <!-- // megabox_site -->
+
+
+                <!-- paintjs_site -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn project" data-bs-toggle="modal" data-bs-target="#paintjsModal" data-type="front-end">
                     <img class="project__img" src="/imgs/project_paintjs.PNG" alt="paintjs_site">
                     <div class="project__description">
-                        <h3>Paint Site</h3>
-                        <span>21.03.19 - 21.03.20</span>
+                        <h2><i class="fas fa-plus-circle"></i></h2>
                     </div>
-                </a>
+                </button>
 
-                <a href="https://github.com/ellahyesu/web-standard-site01" class="project" target="blank"
-                    data-type="front-end">
+                <!-- Modal -->
+                <div class="modal fade" id="paintjsModal" tabindex="-1" aria-labelledby="paintjsModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="d-flex justify-content-between">
+                                    <h4 class="modal-title" id="paintjsModalLabel">Drawing Site</h4>
+                                    <div>
+                                        <a href="https://github.com/ellahyesu/paintjs" class="go-sourcecode" target="blank"">
+                                            　Code
+                                        </a>
+                                    </div>
+                                </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body mt-5 mb-5">
+                                <div class="d-flex">
+                                    <div class="w-50 d-flex justify-content-center align-items-center">
+                                        <a href="https://github.com/ellahyesu/paintjs" target="blank">
+                                            <img class="project__img" src="/imgs/project_paintjs.PNG" alt="paintjs_site">
+                                        </a>
+                                    </div>
+                                    <div class="w-50">
+                                        <table class="project__info__table">
+                                            <thead>
+                                                <tr>
+                                                    <th>개발 기간</th>
+                                                    <td>21.03.19 - 21.03.20</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th>기술 스택</th>
+                                                    <td>
+                                                        <b><small>■</small> Front</b> - JavaScript / HTML / CSS
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        Demo
+                                                    </th>
+                                                    <td>
+                                                        <a href="https://user-images.githubusercontent.com/69390318/130081152-59825cd5-04d3-4f18-ab00-c59d6ee02eb9.gif" target="_blank">
+                                                            <b>바로가기</b>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>담당 업무</th>
+                                                    <td>
+                                                        <b><small>■</small> 구현</b> - Front
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>특이 사항</th>
+                                                    <td>다양한 API들을 사용한 1인 프로젝트</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Modal -->
+                <!-- // paintjs_site -->
+
+
+
+                <!-- standard_site -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn project" data-bs-toggle="modal" data-bs-target="#standardModal" data-type="front-end">
                     <img class="project__img" src="/imgs/project_standard.PNG" alt="standard_site">
                     <div class="project__description">
-                        <h3>Web Standard Site</h3>
-                        <span>21.03.11 - 21.03.18</span>
+                        <h2><i class="fas fa-plus-circle"></i></h2>
                     </div>
-                </a>
+                </button>
 
-                <a href="https://github.com/ellahyesu/spring_quiz" class="project" target="blank" data-type="toy">
+                <!-- Modal -->
+                <div class="modal fade" id="standardModal" tabindex="-1" aria-labelledby="standardModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="d-flex justify-content-between">
+                                    <h4 class="modal-title" id="standardModalLabel">Web Standard Site</h4>
+                                    <div>
+                                        <a href="https://github.com/ellahyesu/web-standard-site01" class="go-sourcecode" target="blank"">
+                                            　Code
+                                        </a>
+                                    </div>
+                                </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body mt-5 mb-5">
+                                <div class="d-flex">
+                                    <div class="w-50 d-flex justify-content-center align-items-center">
+                                        <a href="https://github.com/ellahyesu/web-standard-site01" target="blank">
+                                            <img class="project__img" src="/imgs/project_standard.PNG" alt="standard_site">
+                                        </a>
+                                    </div>
+                                    <div class="w-50">
+                                        <table class="project__info__table">
+                                            <thead>
+                                                <tr>
+                                                    <th>개발 기간</th>
+                                                    <td>21.03.11 - 21.03.18</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th rowspan="2">기술 스택</th>
+                                                    <td>
+                                                        <b><small>■</small> Front</b> - JSP / JavaScript / HTML / CSS
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> Back</b> - Spring / Java / Mybatis / MySQL
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        Demo
+                                                    </th>
+                                                    <td>
+                                                        <a href="https://user-images.githubusercontent.com/69390318/136656109-7e64300d-85d8-4efe-9be6-19d4ec891b2f.png" target="_blank">
+                                                            <b>바로가기</b>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>담당 업무</th>
+                                                    <td>
+                                                        <b><small>■</small> 구현</b> - Front
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Modal -->
+                <!-- // standard_site -->
+
+
+
+                <!-- baemin_site -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn project" data-bs-toggle="modal" data-bs-target="#baeminModal" data-type="toy">
                     <img class="project__img" src="/imgs/project_baemin.PNG" alt="baemin_site">
                     <div class="project__description">
-                        <h3>Delivery Food Reviews</h3>
-                        <span>21.07.30</span>
+                        <h2><i class="fas fa-plus-circle"></i></h2>
                     </div>
-                </a>
+                </button>
 
-                <a href="https://github.com/ellahyesu/spring_quiz" class="project" target="blank" data-type="toy">
+                <!-- Modal -->
+                <div class="modal fade" id="baeminModal" tabindex="-1" aria-labelledby="baeminModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="d-flex justify-content-between">
+                                    <h4 class="modal-title" id="baeminModalLabel">Review Site</h4>
+                                    <div>
+                                        <a href="https://github.com/ellahyesu/spring_quiz" class="go-sourcecode" target="blank"">
+                                            　Code
+                                        </a>
+                                    </div>
+                                </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body mt-5 mb-5">
+                                <div class="d-flex">
+                                    <div class="w-50 d-flex justify-content-center align-items-center">
+                                        <a href="https://github.com/ellahyesu/spring_quiz" target="blank">
+                                            <img class="project__img" src="/imgs/project_baemin.PNG" alt="baemin_site">
+                                        </a>
+                                    </div>
+                                    <div class="w-50">
+                                        <table class="project__info__table">
+                                            <thead>
+                                                <tr>
+                                                    <th>개발 기간</th>
+                                                    <td>21.07.30</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th rowspan="2">기술 스택</th>
+                                                    <td>
+                                                        <b><small>■</small> Front</b> - JSP / jQuery / HTML / CSS
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> Back</b> - Spring / Java / Mybatis / MySQL
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        Demo
+                                                    </th>
+                                                    <td>
+                                                        <a href="https://user-images.githubusercontent.com/69390318/136019499-82d7ed33-16eb-45b9-8a37-68d212599b34.PNG" target="_blank">
+                                                            <b>바로가기</b>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th rowspan="3">담당 업무</th>
+                                                    <td>
+                                                        <b><small>■</small> 설계</b> - UI / DB / API
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> 구현</b> - Front / Back
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> 테스트</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>특이 사항</th>
+                                                    <td>1인 프로젝트</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Modal -->
+                <!-- // baemin_site -->
+
+
+
+
+                <!-- weather_site -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn project" data-bs-toggle="modal" data-bs-target="#weatherModal" data-type="toy">
                     <img class="project__img" src="/imgs/project_weather.PNG" alt="weather_site">
                     <div class="project__description">
-                        <h3>Weather Forecast Site</h3>
-                        <span>21.07.29</span>
+                        <h2><i class="fas fa-plus-circle"></i></h2>
                     </div>
-                </a>
+                </button>
 
-                <a href="https://github.com/ellahyesu/servlet_test_server" class="project" target="blank"
-                    data-type="toy">
+                <!-- Modal -->
+                <div class="modal fade" id="weatherModal" tabindex="-1" aria-labelledby="weatherModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="d-flex justify-content-between">
+                                    <h4 class="modal-title" id="weatherModalLabel">Weather Site</h4>
+                                    <div>
+                                        <a href="https://github.com/ellahyesu/spring_quiz" class="go-sourcecode" target="blank"">
+                                            　Code
+                                        </a>
+                                    </div>
+                                </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body mt-5 mb-5">
+                                <div class="d-flex">
+                                    <div class="w-50 d-flex justify-content-center align-items-center">
+                                        <a href="https://github.com/ellahyesu/memo" target="blank">
+                                            <img class="project__img" src="/imgs/project_weather.PNG" alt="weather_site">
+                                        </a>
+                                    </div>
+                                    <div class="w-50">
+                                        <table class="project__info__table">
+                                            <thead>
+                                                <tr>
+                                                    <th>개발 기간</th>
+                                                    <td>21.07.29</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th rowspan="2">기술 스택</th>
+                                                    <td>
+                                                        <b><small>■</small> Front</b> - JSP / jQuery / HTML / CSS
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> Back</b> - Spring / Java / Mybatis / MySQL
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        Demo
+                                                    </th>
+                                                    <td>
+                                                        <a href="https://user-images.githubusercontent.com/69390318/136021237-43e20472-2637-4736-b127-d71dbf8b8bdd.PNG" target="_blank">
+                                                            <b>바로가기</b>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th rowspan="3">담당 업무</th>
+                                                    <td>
+                                                        <b><small>■</small> 설계</b> - UI / DB / API
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> 구현</b> - Front / Back
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> 테스트</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>특이 사항</th>
+                                                    <td>1인 프로젝트</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Modal -->
+                <!-- // weather_site -->
+
+
+
+
+                <!-- usedgoods_site -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn project" data-bs-toggle="modal" data-bs-target="#paintjsModal" data-type="toy">
                     <img class="project__img" src="/imgs/project_hong.PNG" alt="usedgoods_site">
                     <div class="project__description">
-                        <h3>Used Goods Market</h3>
-                        <span>21.07.09 - 21.07.14</span>
+                        <h2><i class="fas fa-plus-circle"></i></h2>
                     </div>
-                </a>
+                </button>
 
-                <a href="https://github.com/ellahyesu/servlet_test_server" class="project" target="blank"
-                    data-type="toy">
+                <!-- Modal -->
+                <div class="modal fade" id="paintjsModal" tabindex="-1" aria-labelledby="paintjsModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="d-flex justify-content-between">
+                                    <h4 class="modal-title" id="paintjsModalLabel">Megabox Site</h4>
+                                    <div>
+                                        <a href="https://github.com/ellahyesu/spring_quiz" class="go-sourcecode" target="blank"">
+                                            　Code
+                                        </a>
+                                    </div>
+                                </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body mt-5 mb-5">
+                                <div class="d-flex">
+                                    <div class="w-50 d-flex justify-content-center align-items-center">
+                                        <a href="https://github.com/ellahyesu/memo" target="blank">
+                                            <img class="project__img" src="/imgs/project_hong.PNG" alt="usedgoods_site">
+                                        </a>
+                                    </div>
+                                    <div class="w-50">
+                                        <table class="project__info__table">
+                                            <thead>
+                                                <tr>
+                                                    <th>개발 기간</th>
+                                                    <td>21.08.11 - 21.08.24</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th rowspan="2">기술 스택</th>
+                                                    <td>
+                                                        <b><small>■</small> Front</b> - JSP / JavaScript / HTML / CSS
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> Back</b> - Spring / Java / Mybatis / MySQL
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        Demo
+                                                    </th>
+                                                    <td>
+                                                        <a href="https://user-images.githubusercontent.com/69390318/130616130-721ccdbd-188b-40f3-b8d1-82084dc79d90.gif" target="_blank">
+                                                            <b>바로가기</b>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th rowspan="3">담당 업무</th>
+                                                    <td>
+                                                        <b><small>■</small> 설계</b> - UI / DB / API
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> 구현</b> - Front / Back
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> 테스트</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>특이 사항</th>
+                                                    <td>1인 프로젝트</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Modal -->
+                <!-- // usedgoods_site -->
+
+
+                <!-- music_site -->
+                <!-- Button trigger modal -->
+                <button type="button" class="btn project" data-bs-toggle="modal" data-bs-target="#melonModal" data-type="toy">
                     <img class="project__img" src="/imgs/project_melon.PNG" alt="music_site">
                     <div class="project__description">
-                        <h3>Music Site</h3>
-                        <span>21.07.06</span>
+                        <h2><i class="fas fa-plus-circle"></i></h2>
                     </div>
-                </a>
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="melonModal" tabindex="-1" aria-labelledby="melonModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-xl">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <div class="d-flex justify-content-between">
+                                    <h4 class="modal-title" id="melonModalLabel">Megabox site</h4>
+                                    <div>
+                                        <a href="https://github.com/ellahyesu/spring_quiz" class="go-sourcecode" target="blank"">
+                                            　Code
+                                        </a>
+                                    </div>
+                                </div>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body mt-5 mb-5">
+                                <div class="d-flex">
+                                    <div class="w-50 d-flex justify-content-center align-items-center">
+                                        <a href="https://github.com/ellahyesu/memo" target="blank">
+                                            <img class="project__img" src="/imgs/project_melon.PNG" alt="music_site">
+                                        </a>
+                                    </div>
+                                    <div class="w-50">
+                                        <table class="project__info__table">
+                                            <thead>
+                                                <tr>
+                                                    <th>개발 기간</th>
+                                                    <td>21.08.11 - 21.08.24</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <th rowspan="2">기술 스택</th>
+                                                    <td>
+                                                        <b><small>■</small> Front</b> - JSP / JavaScript / HTML / CSS
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> Back</b> - Spring / Java / Mybatis / MySQL
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>
+                                                        Demo
+                                                    </th>
+                                                    <td>
+                                                        <a href="https://user-images.githubusercontent.com/69390318/130616130-721ccdbd-188b-40f3-b8d1-82084dc79d90.gif" target="_blank">
+                                                            <b>바로가기</b>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th rowspan="3">담당 업무</th>
+                                                    <td>
+                                                        <b><small>■</small> 설계</b> - UI / DB / API
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> 구현</b> - Front / Back
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <b><small>■</small> 테스트</b>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <th>특이 사항</th>
+                                                    <td>1인 프로젝트</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- // Modal -->
+                <!-- // music_site -->
             </div>
         </div>
     </section>
 
+
     <!-- Contact -->
     <section id="contact" class="section">
-        <h1 class="contact__font">Contact</h1>
+        <h1 class="contact__font mb-5"><b>Contact</b></h1>
 
-        <div class="contact__email">
-            <p class="contact__email">hyesukim@kakao.com</p>
-            <button onclick="copy()"><i class="copy__btn far fa-copy"></i></button>
+        <div class="contact__me">
+            <div class="contact__me">
+                <div class="d-flex align-items-center text__small">
+                    메일 주소
+                </div>
+            </div>
+            <button onclick="copy()" class="text-primary pl-1">
+                <b>복사하기</b>
+            </button>
         </div>
-
-        <div class="contact__links">
-            <a href="https://blog.naver.com/ellahyesu">
-                <!-- blog: blog.naver.com/ellahyesu -->
-                <i class="contact__blog fas fa-blog"></i>
-            </a>
-
+        <div>
+            <div class="contact__me">
+                <div class="d-flex align-items-center text__small pr-3">누적 5,000명이 참고한 블로그</div>
+                <a href="https://blog.naver.com/ellahyesu">
+                    <b>바로가기</b>
+                </a>
+            </div>
+        </div>
+        <div>
+            <div class="contact__me">
+                <div class="d-flex align-items-center text__small">
+                    깃 허브
+                </div>
+                <a href="https://github.com/ellahyesu">
+                    <b>바로가기</b>
+                </a>
+            </div>
+        </div>
+        <!-- <div class="contact__links">
             <a href="https://github.com/ellahyesu" target="__blank">
                 <i class="contact__git fab fa-github"></i>
             </a>
-        </div>
-
-        <div class="count__today">
+        </div> -->
+        <div class="count__today mt-5">
             <div>
                 Total　
             </div>
@@ -322,8 +1524,7 @@
                     alt="hit counter"></a>
             <!-- End of CuterCounter Code -->
         </div>
-
-        <small class="contact__rights">© 2021. Hyesu Kim. All Rights Reserved.</small>
+        <h6 class="contact__rights">© 2021. Hyesu Kim. All Rights Reserved.</h6>
     </section>
 
     <!-- Arrow up -->
