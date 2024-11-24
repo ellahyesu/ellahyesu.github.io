@@ -1,0 +1,87 @@
+# Java 관련
+*.class
+*.jar
+*.war
+*.ear
+*.iml
+*.log
+*.out
+*.swp
+
+# 빌드 디렉토리
+/target/
+/build/
+/out/
+
+# IDE 설정
+/.idea/
+/.vscode/
+*.iws
+*.ipr
+*.iml
+
+# Maven
+/.mvn/
+.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+
+# Gradle (필요한 경우)
+/.gradle/
+/build/
+/.gradle-cache/
+/build-cache/
+/*.lock
+
+# OS 관련
+.DS_Store
+Thumbs.db
+
+# Spring Boot 환경 설정
+/application.properties
+/application.yml
+/application-*.properties
+/application-*.yml
+
+# Node.js 관련 (Vue.js)
+/node_modules/
+/dist/
+/yarn-error.log
+yarn.lock
+package-lock.json
+
+# 환경 변수 파일 (민감한 정보)
+/.env
+.env.local
+.env.*.local
+
+# Test coverage
+/coverage/
+/.nyc_output/
+
+# IntelliJ와 Eclipse 설정 파일
+/.classpath
+/.project
+/.settings/
+/.factorypath
+
+# Logs
+*.log
+/logs/
+
+# Temp Files
+*.tmp
+*.bak
+*.swp
+*.swo
+*.swn
+*.old
+
+# 기타
+*.orig
+*.rej
+*.exe
