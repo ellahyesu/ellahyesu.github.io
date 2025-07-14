@@ -56,7 +56,7 @@
     document.getElementById('total').innerText = localStorage.getItem('totalCount') || 0;
 
     // Google Apps Script 웹앱 URL로 fetch 
-    fetch('https://script.google.com/macros/s/AKfycbzmt-n7Pb9G0uwqmVvXe8OuEZ1hQ9KixJf9_HgWIOcpESlVuI4KAdw0anIznmu_Oqj5wA/exec')
+    fetch('https://script.google.com/macros/s/AKfycbyRxAzKajlzsPV3j0oliBOLkkk4L6flXBAbFFfUtcvhxgS_wYSZ1zif-SUZrJe3Ib1Q/exec')
         .then(res => res.json())
         .then(data => {
         document.getElementById('today').innerText = data.today;
