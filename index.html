@@ -52,11 +52,11 @@
     <script src="main.js"></script>
     <script>
     // 이전 값 표시 (localStorage)
-    document.getElementById('today').innerText = localStorage.getItem('todayCount') || '0';
-    document.getElementById('total').innerText = localStorage.getItem('totalCount') || '0';
+    document.getElementById('today').innerText = localStorage.getItem('todayCount') || 0;
+    document.getElementById('total').innerText = localStorage.getItem('totalCount') || 0;
 
     // Google Apps Script 웹앱 URL로 fetch 
-    fetch('https://script.google.com/macros/s/AKfycbxUVHP-7cCKgXf7u7MsLUazkivW32DBk2hfW4kfo7Rrl00fL-4sOdKtLcBuXKYAaDpWCQ/exec')
+    fetch('https://script.google.com/macros/s/AKfycbzmt-n7Pb9G0uwqmVvXe8OuEZ1hQ9KixJf9_HgWIOcpESlVuI4KAdw0anIznmu_Oqj5wA/exec')
         .then(res => res.json())
         .then(data => {
         document.getElementById('today').innerText = data.today;
