@@ -24,23 +24,12 @@
             </ul>
         </nav>
 
-
-        <!-- Total, Today 방문자수 카운터 (google sheet API 사용) -->
+        <!-- Today, Total 방문자수 카운터 (google sheet API 사용) -->
         <span style="color:#ff7300;">
             TODAY: <span id="today"></span><br>
             TOTAL: <span id="total"></span>
         </span>
         
-        <script>
-        fetch('https://script.google.com/macros/s/AKfycbxRRpKA098pT9UWb6eKReHws-O42-NV7tbILiqvxfK0Wzs_cqfMWctYRmAUFh7NwRbN/exec')
-        .then(res => res.json())
-        .then(data => {
-            document.getElementById('today').innerText = data.today;
-            document.getElementById('total').innerText = data.total;
-        });
-        </script>
-
-
         <div class="neon-desc">
             HELLO, I'M ELLA HYESU, A FULL-STACK WEB DEVELOPER.<br>
             WELCOME TO MY WEB SITE—WHERE I SHARE MY WORK, MY GROWTH, AND MY VISION AS A WEB DEVELOPER STRIVING TO MAKE TECHNOLOGY MORE MEANINGFUL.<br><br>  
@@ -61,5 +50,13 @@
         </main>
     </div>
     <script src="main.js"></script>
+    <script>
+        fetch('https://script.google.com/macros/s/AKfycbxRRpKA098pT9UWb6eKReHws-O42-NV7tbILiqvxfK0Wzs_cqfMWctYRmAUFh7NwRbN/exec')
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById('today').innerText = data.today;
+            document.getElementById('total').innerText = data.total;
+        });
+    </script>
 </body>
 </html>
