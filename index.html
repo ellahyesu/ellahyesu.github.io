@@ -25,19 +25,21 @@
         </nav>
 
 
-        <!-- head 안에 X, body 원하는 위치에 아래 코드 삽입 -->
+        <!-- Total, Today 방문자수 카운터 (google sheet API 사용) -->
+        <span style="color:#ff7300;">
+            TODAY: <span id="today"></span><br>
+            TOTAL: <span id="total"></span>
+        </span>
         
-        <!-- busuanzi 방문자수 -->
-        <script src="https://cdn.jsdelivr.net/npm/busuanzi@2.3.0/dist/busuanzi.pure.min.js"></script>
-        <div style="margin-top:20px;">
-            <span id="busuanzi_container_site_pv" style="color:#ff7300;font-size:1rem;">
-              TOTAL: <span id="busuanzi_value_site_pv"></span>
-            </span>
-            <br>
-            <span id="busuanzi_container_site_uv" style="color:#ff7300;font-size:1rem;">
-              TODAY: <span id="busuanzi_value_site_uv"></span>
-            </span>
-        </div>
+        <script>
+        fetch('https://script.google.com/macros/s/AKfycbxRRpKA098pT9UWb6eKReHws-O42-NV7tbILiqvxfK0Wzs_cqfMWctYRmAUFh7NwRbN/exec')
+        .then(res => res.json())
+        .then(data => {
+            document.getElementById('today').innerText = data.today;
+            document.getElementById('total').innerText = data.total;
+        });
+        </script>
+
 
         <div class="neon-desc">
             HELLO, I'M ELLA HYESU, A FULL-STACK WEB DEVELOPER.<br>
